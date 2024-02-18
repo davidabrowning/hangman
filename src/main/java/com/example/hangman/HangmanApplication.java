@@ -28,10 +28,10 @@ public class HangmanApplication extends Application {
     private Label guessingProgressLabel;
     private Label missesRemainingLabel;
     private List<Button> letterButtons;
-    private Font fontExtraLarge;
-    private Font fontLarge;
-    private Font fontMedium;
-    private Font fontSmall;
+    private static final Font FONT_EXTRA_LARGE = new Font("Arial", 40);
+    private static final Font FONT_LARGE = new Font("Arial", 24);
+    private static final Font FONT_MEDIUM = new Font("Arial", 16);
+    private static final Font FONT_SMALL = new Font("Arial", 12);
 
     public static void main(String[] args) {
         Application.launch(HangmanApplication.class);
@@ -42,10 +42,6 @@ public class HangmanApplication extends Application {
 
         hangmanController = new HangmanController();
         letterButtons = new ArrayList<>();
-        fontExtraLarge = new Font("Arial", 40);
-        fontLarge = new Font("Arial", 24);
-        fontMedium = new Font("Arial", 16);
-        fontSmall = new Font("Arial", 12);
         stage = newStage;
         wordInputScene = createWordInputScene();
         guessingScene = createGuessingScene();
@@ -63,11 +59,11 @@ public class HangmanApplication extends Application {
 
         // Create components
         Label wordInputLabel = new Label("Please input a word for the other player to guess:");
-        wordInputLabel.setFont(fontMedium);
+        wordInputLabel.setFont(FONT_MEDIUM);
         wordInputText = new TextField();
-        wordInputText.setFont(fontMedium);
+        wordInputText.setFont(FONT_MEDIUM);
         Button wordInputSubmitButton = new Button("Let's play");
-        wordInputSubmitButton.setFont(fontMedium);
+        wordInputSubmitButton.setFont(FONT_MEDIUM);
 
         // Add components to container
         HBox wordInputContainer = new HBox();
@@ -110,9 +106,9 @@ public class HangmanApplication extends Application {
 
         // Create the components
         guessingProgressLabel = new Label("No word given");
-        guessingProgressLabel.setFont(fontExtraLarge);
+        guessingProgressLabel.setFont(FONT_EXTRA_LARGE);
         missesRemainingLabel = new Label("Misses remaining: " + Word.MAX_MISSES);
-        missesRemainingLabel.setFont(fontMedium);
+        missesRemainingLabel.setFont(FONT_MEDIUM);
         VBox letterGuessingContainer = createLetterGuessingButtons();
         Button resetGameButton = new Button("Start over");
         resetGameButton.setOnAction(event -> {
@@ -160,7 +156,7 @@ public class HangmanApplication extends Application {
         HBox lettersRowContainer = new HBox();
         for (String letter : lettersRow) {
             Button letterButton = new Button(letter);
-            letterButton.setFont(fontMedium);
+            letterButton.setFont(FONT_MEDIUM);
             letterButton.setBackground(Background.fill(Color.WHITESMOKE));
             letterButton.setPrefHeight(40);
             letterButton.setPrefWidth(40);
