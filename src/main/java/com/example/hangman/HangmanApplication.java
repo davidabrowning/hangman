@@ -81,12 +81,8 @@ public class HangmanApplication extends Application {
         Scene wordInputScene = new Scene(wordInputContainer);
 
         // Add action events
-        wordInputText.setOnAction(event -> {
-            setWord(wordInputText.getText());
-        });
-        wordInputSubmitButton.setOnAction(event -> {
-            setWord(wordInputText.getText());
-        });
+        wordInputText.setOnAction(event -> setWord(wordInputText.getText()));
+        wordInputSubmitButton.setOnAction(event -> setWord(wordInputText.getText()));
 
         return wordInputScene;
     }
