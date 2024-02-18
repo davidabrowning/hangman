@@ -28,9 +28,14 @@ public class HangmanApplication extends Application {
     private Label guessingProgressLabel;
     private Label missesRemainingLabel;
     private List<Button> letterButtons;
+
+    @SuppressWarnings("unused")
     private static final Font FONT_EXTRA_LARGE = new Font("Arial", 40);
+    @SuppressWarnings("unused")
     private static final Font FONT_LARGE = new Font("Arial", 24);
+    @SuppressWarnings("unused")
     private static final Font FONT_MEDIUM = new Font("Arial", 16);
+    @SuppressWarnings("unused")
     private static final Font FONT_SMALL = new Font("Arial", 12);
 
     public static void main(String[] args) {
