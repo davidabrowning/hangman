@@ -5,11 +5,11 @@ import java.util.Set;
 
 public class Word {
 
-    private char[] letters;
+    private final char[] letters;
     public static final int MAX_MISSES = 7;
-    private Set<Character> guessedLetters;
-    private Set<Character> correctLetters;
-    private Set<Character> missedLetters;
+    private final Set<Character> guessedLetters;
+    private final Set<Character> correctLetters;
+    private final Set<Character> missedLetters;
 
     public Word(String wordAsString) {
         letters = wordAsString.toUpperCase().toCharArray();
