@@ -18,12 +18,12 @@ class HangmanControllerTest {
     @Test
     void wordStartsAsNull() {
         HangmanController newHangmanController = new HangmanController();
-        assertNull(newHangmanController.getWord());
+        assertNull(newHangmanController.getWordAsString());
     }
 
     @Test
     void wordIsNotNullAfterBeingSet() {
-        assertNotNull(hc.getWord());
+        assertNotNull(hc.getWordAsString());
     }
 
     @Test

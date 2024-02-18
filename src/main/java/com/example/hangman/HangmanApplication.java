@@ -98,7 +98,7 @@ public class HangmanApplication extends Application {
         if (hangmanController.gameOver()) {
             missesRemainingLabel.setText("Game over!");
         } else {
-            int missesRemaining = Word.MAX_MISSES - hangmanController.getWord().getMissedLetters().size();
+            int missesRemaining = Word.MAX_MISSES - hangmanController.getMissedLetters().size();
             missesRemainingLabel.setText("Misses remaining: " + missesRemaining);
         }
     }

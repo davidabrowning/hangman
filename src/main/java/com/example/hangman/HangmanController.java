@@ -2,6 +2,8 @@ package com.example.hangman;
 
 import com.example.hangman.domain.Word;
 
+import java.util.Set;
+
 public class HangmanController {
 
     Word word;
@@ -16,11 +18,10 @@ public class HangmanController {
         }
     }
 
-    public Word getWord() {
-        return word;
-    }
-
     public String getWordAsString() {
+        if (word == null) {
+            return null;
+        }
         StringBuilder s = new StringBuilder();
         for (char c : word.getLetters()) {
             s.append(c);
@@ -72,6 +73,10 @@ public class HangmanController {
             }
         }
         return true;
+    }
+
+    public Set<Character> getMissedLetters() {
+        return word.getMissedLetters();
     }
 
 
