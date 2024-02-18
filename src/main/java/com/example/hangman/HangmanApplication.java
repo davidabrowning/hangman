@@ -154,6 +154,8 @@ public class HangmanApplication extends Application {
 
     private HBox createLetterGuessesRow(String[] lettersRow) {
         HBox lettersRowContainer = new HBox();
+        lettersRowContainer.setSpacing(10);
+        lettersRowContainer.setPadding(new Insets(5, 0, 5, 0));
         for (String letter : lettersRow) {
             Button letterButton = new Button(letter);
             letterButton.setFont(HangmanApplication.FONT_MEDIUM);
