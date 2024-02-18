@@ -127,8 +127,7 @@ public class HangmanApplication extends Application {
         guessingContainer.setAlignment(Pos.CENTER);
 
         // Add the container to the Scene
-        Scene guessingScene = new Scene(guessingContainer);
-        return guessingScene;
+        return new Scene(guessingContainer);
     }
 
     private VBox createLetterGuessingButtons() {
