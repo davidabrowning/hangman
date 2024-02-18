@@ -41,7 +41,7 @@ public class HangmanController {
             } else {
                 s.append('_');
             }
-            s.append(' ');
+            s.append("   ");
         }
         s.deleteCharAt(s.length() - 1);
         return s.toString();
